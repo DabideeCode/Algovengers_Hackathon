@@ -10,7 +10,7 @@
     <header>
         <nav class="navbar">
             <a href="index.html" class="logo">
-                <img src="/static/images/THE_FINAL_LOGO.png" alt="LevelField Logo">
+                <img src="THE_FINAL_LOGO.png" alt="LevelField Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -24,28 +24,21 @@
     <main>
         <section class="demo-page">
             <h1>Demo Page</h1>
-            <p>This is a demo page. Below, you can see the transformation of a resume before and after using our tool:</p>
+            <div class="upload-demo">
+                <p>Upload your resume to see a live transformation demo (support PDF format).</p>
+                <input type="file" id="resumeUpload" class="upload-button" accept=".pdf" />
+                <button class="transform-button" onclick="uploadResume()">Download Live Demo</button>
+            </div>
             
             <div class="image-container">
                 <div class="image-box">
                     <h2>Before</h2>
-                    <img src="/static/images/before.jpg" alt="Before Resume">
+                    <img src="before.jpg" alt="Before Resume">
                 </div>
                 <div class="image-box">
                     <h2>After</h2>
-                    <img src="/static/images/after.jpg" alt="After Resume">
+                    <img src="after.jpg" alt="After Resume">
                 </div>
-            </div>
-
-            <!-- Add an Upload Resume section -->
-            <div class="upload-demo">
-                <h2>Try it Yourself</h2>
-                <p>Upload your resume to see a live transformation demo.</p>
-                <!-- Form to upload file -->
-                <form id="resumeUploadForm" action="/upload" method="POST" enctype="multipart/form-data">
-                    <input type="file" id="resumeUpload" name="file" class="upload-button" accept=".pdf,.doc,.docx" required />
-                    <button type="submit" class="transform-button">Show Live Demo</button>
-                </form>
             </div>
         </section>
     </main>
