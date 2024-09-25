@@ -328,3 +328,25 @@ header {
 .links-list li a:hover {
     color: #008cba;
 } */
+
+/* ------------------------------ Analytics ------------------------------ */
+.image-container{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.centered-image{
+    max-height: calc(100vh - 100px);
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.analytics-page h1{
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}

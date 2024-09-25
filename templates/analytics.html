@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - LevelField</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="/static/images/THE_FINAL_LOGO.png" alt="LevelField Logo" style="height: 40px;"> <!-- Adjust the logo height as needed -->
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="demo.html">Demo</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="analytics-page">
+            <h1>Check Your Statistics</h1>
+            <div class="image-container">
+                <img src="/static/images/analysis-image.jpeg" alt="Analytics Image" class="centered-image">
+            </div>
+        </section>
+    </main>
+    <script src="{ url_for('static', filename='js/script.js') }></script>
+</body>
+</html>

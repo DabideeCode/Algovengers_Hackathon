@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LevelField</title>
+    <!-- Link to CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Link to home page -->
+        <a href="{{ url_for('home') }}" class="logo">
+          <!-- Use url_for to dynamically link the image -->
+          <img
+            src="{{ url_for('static', filename='images/THE_FINAL_LOGO.png') }}"
+            alt="LevelField Logo"
+          />
+        </a>
+        <ul class="nav-links">
+          <!-- Use url_for for page links -->
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('render_page', page_name='account') }}">My Account</a></li>
+          <li><a href="{{ url_for('render_page', page_name='demo') }}">Demo</a></li>
+          <li><a href="{{ url_for('render_page', page_name='analytics') }}">Analytics</a></li>
+          <li><a href="{{ url_for('render_page', page_name='contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="landing-page">
+        <h1>Transform Recruitment,</h1>
+        <h1>Eliminate Bias.</h1>
+        <!-- Button linking to demo page -->
+        <a href="{{ url_for('render_page', page_name='demo') }}" class="demo-button">Show Demo</a>
+      </section>
+    </main>
+    <!-- Link to JS file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
