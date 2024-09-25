@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - LevelField</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">levelField</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="account-page">
+            <h1>API Dashboard</h1>
+
+            <div class="api-key-section">
+                <h2>Your API Key</h2>
+                <div class="api-key-box">
+                    <input type="text" readonly value="your-api-key-123456789" id="apiKey" class="api-key-input">
+                    <button onclick="copyApiKey()">Copy</button>
+                </div>
+            </div>
+
+            <div class="api-usage-section">
+                <h2>Usage Statistics</h2>
+                <div class="usage-box">
+                    <div class="usage-item">
+                        <h3>Total API Calls</h3>
+                        <p>1200</p>
+                    </div>
+                    <div class="usage-item">
+                        <h3>Monthly Limit</h3>
+                        <p>5000</p>
+                    </div>
+                    <div class="usage-item">
+                        <h3>Remaining Calls</h3>
+                        <p>3800</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="links-section">
+                <h2>Quick Links</h2>
+                <ul class="links-list">
+                    <li><a href="#">API Documentation</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Billing Information</a></li>
+                </ul>
+            </div> -->
+        </section>
+    </main>
+
+    <script>
+        function copyApiKey() {
+            var apiKey = document.getElementById("apiKey");
+            apiKey.select();
+            apiKey.setSelectionRange(0, 99999); /* For mobile devices */
+            document.execCommand("copy");
+            alert("API Key copied to clipboard");
+        }
+    </script>
+</body>
+</html>

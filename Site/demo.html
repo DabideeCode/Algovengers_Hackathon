@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - LevelField</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">levelField</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="demo-page">
+            <h1>Demo Page</h1>
+            <p>This is a demo page. Below, you can see the transformation of a resume before and after using our tool:</p>
+            
+            <div class="image-container">
+                <div class="image-box">
+                    <h2>Before</h2>
+                    <img src="before.jpg" alt="Before Resume">
+                </div>
+                <div class="image-box">
+                    <h2>After</h2>
+                    <img src="after.jpg" alt="After Resume">
+                </div>
+            </div>
+
+            <!-- Add an Upload Resume section -->
+            <div class="upload-demo">
+                <h2>Try it Yourself</h2>
+                <p>Upload your resume to see a live transformation demo.</p>
+                <input type="file" id="resumeUpload" class="upload-button" accept=".pdf,.doc,.docx" />
+                <button class="transform-button" onclick="uploadResume()">Show Live Demo</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
