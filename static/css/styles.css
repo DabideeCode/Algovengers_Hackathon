@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('landing-page2.jpeg'); /* Add background image */
+    background-image: url('/static/images/landing-page2.jpeg'); /* Add background image */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
@@ -14,7 +14,7 @@ header {
     position: sticky; /* Makes the header stick to the top */
     top: 0;
     z-index: 1000; /* Ensure it stays above other content */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for navbar */
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background for navbar */
 }
 
 .navbar {
@@ -30,6 +30,12 @@ header {
     font-weight: bold;
     color: #007BFF; /* Logo color changed to blue */
     text-decoration: none; /* Remove underline from the logo */
+}
+
+.logo img {
+    height: 40px; /* Set a height for the logo */
+    width: auto;  /* Maintain aspect ratio */
+    display: block; /* Make it a block element for better alignment */
 }
 
 .nav-links {
@@ -61,7 +67,7 @@ header {
 
 .landing-page h1 {
     font-size: 4em; /* Slogan font size */
-    margin: 0 0 20px 0; /* Margin below the slogan */
+    margin: 0 0 25px 0; /* Margin below the slogan */
     color: rgba(255, 255, 255); /* Slogan color changed to blue */
 }
 
@@ -113,6 +119,11 @@ header {
     border-radius: 5px;
 }
 
+#message {
+    height: 130px; /* Set the desired height for the message box */
+    resize: none; /* Prevent the user from resizing the box */
+}
+
 .contact-page button {
     padding: 10px;
     background-color: #007BFF; /* Button color */
@@ -127,6 +138,12 @@ header {
     background-color: #0056b3; /* Darker button color on hover */
 }
 
+
+#responseMessage {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
 
 /* ------------------------------ Demo Page ------------------------------ */
 

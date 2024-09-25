@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo - LevelField</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="index.html" class="logo">levelField</a>
+            <a href="index.html" class="logo">
+                <img src="/static/images/THE_FINAL_LOGO.png" alt="LevelField Logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="account.html">My Account</a></li>
+                <li><a href="demo.html">Demo</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -25,11 +28,11 @@
             <div class="image-container">
                 <div class="image-box">
                     <h2>Before</h2>
-                    <img src="before.jpg" alt="Before Resume">
+                    <img src="/static/images/before.jpg" alt="Before Resume">
                 </div>
                 <div class="image-box">
                     <h2>After</h2>
-                    <img src="after.jpg" alt="After Resume">
+                    <img src="/static/images/after.jpg" alt="After Resume">
                 </div>
             </div>
 
@@ -37,12 +40,15 @@
             <div class="upload-demo">
                 <h2>Try it Yourself</h2>
                 <p>Upload your resume to see a live transformation demo.</p>
-                <input type="file" id="resumeUpload" class="upload-button" accept=".pdf,.doc,.docx" />
-                <button class="transform-button" onclick="uploadResume()">Show Live Demo</button>
+                <!-- Form to upload file -->
+                <form id="resumeUploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="resumeUpload" name="file" class="upload-button" accept=".pdf,.doc,.docx" required />
+                    <button type="submit" class="transform-button">Show Live Demo</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="{ url_for('static', filename='js/script.js') }"></script>
 </body>
 </html>

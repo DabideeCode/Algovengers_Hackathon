@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file, render_template
+from flask import Flask, request, jsonify, send_file, render_template, send_from_directory
 import PyPDF2
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
@@ -6,14 +6,26 @@ from openai import OpenAI
 import os
 
 # Set up OpenAI API key
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='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')
 
-app = Flask(__name__, template_folder=os.path.join(os.path.pardir, 'Site'))
+app = Flask(__name__, 
+            template_folder=os.path.join(os.path.pardir, 'Site'),
+            static_folder='../static')
 
+# Route for the index page
 @app.route('/')
-
 def home():
     return render_template('index.html')
+
+# Route for other pages (e.g., account, contact, demo)
+@app.route('/<page_name>.html')
+def render_page(page_name):
+    return render_template(f'{page_name}.html')
+
+# Serving static files (CSS, JS, Images) is handled automatically by Flask
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory('static', filename)
 
 # Step 1: Upload and Extract Text from CV
 def extract_text_from_pdf(pdf_path):
@@ -38,6 +50,8 @@ def anonymize_cv(cv_text):
     
     CV Text:
     {cv_text}
+
+    please froa
     """
 
     response = client.chat.completions.create(
@@ -84,9 +98,7 @@ def upload_file():
     output_pdf_path = os.path.join("outputs", "anonymized_cv.pdf")
     generate_new_cv(modified_text, output_pdf_path)
 
-    # Create the outputs directory if it doesn't exist
-    output_dir = os.path.join(os.path.dirname(__file__), 'outputs')
-    output_pdf_path = os.path.join(output_dir, "anonymized_cv.pdf")
+    output_pdf_path = '/Users/colemei/Library/Mobile Documents/com~apple~CloudDocs/01.Work/04.Master/Course/24 S2/2024 Hackathon/Algovengers_Hackathon/outputs/anonymized_cv.pdf'
     # Return the anonymized PDF to the user
     return send_file(output_pdf_path, as_attachment=True)
 
