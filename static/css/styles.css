@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('/static/images/landing-page2.jpeg'); /* Add background image */
+    background-image: url('landing-page2.jpeg'); /* Add background image */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background from repeating */
@@ -146,7 +146,6 @@ header {
 }
 
 /* ------------------------------ Demo Page ------------------------------ */
-
 .demo-page {
     text-align: center;
     padding: 30px 50px 50px;
@@ -168,7 +167,7 @@ header {
 .image-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px; /* Increased gap between images */
 }
 
 .image-box {
@@ -176,11 +175,11 @@ header {
 }
 
 .image-box img {
-    width: 300px;
-    height: 400px;
+    width: 350px;  /* Increased width */
+    height: 500px; /* Increased height */
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); /* More prominent shadow */
 }
 
 .image-box h2 {
@@ -189,7 +188,6 @@ header {
     margin-bottom: 10px;
 }
 
-
 /* Style for the upload demo section */
 .upload-demo {
     text-align: center;
@@ -197,32 +195,54 @@ header {
 }
 
 .upload-button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px 15px 15px 30px;
+    border: 2px solid #00d1ff; /* Changed border style */
+    border-radius: 30px; /* Rounded corners */
+    background-color: #f0f8ff; /* Light background color */
+    color: #333;
     margin: 10px 0;
     display: block;
-    width: 60%;
+    width: 50%;
     margin: 0 auto 20px auto;
     text-align: center;
     cursor: pointer;
+    font-size: 1.1em; /* Larger font size */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Added smooth transitions */
+}
+
+.upload-button:hover {
+    background-color: #00d1ff; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    border-color: #008bb0; /* Change border color on hover */
 }
 
 .transform-button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #808080;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .transform-button:hover {
     background-color: #00d1ff;
 }
 
+/* Increase margin between the image sections */
+.image-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
+.image-box img {
+    width: 500px;  /* Larger width */
+    height: 650px; /* Larger height */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
 
 /* ------------------------------ Account Page (API Dashboard) ------------------------------ */
 
